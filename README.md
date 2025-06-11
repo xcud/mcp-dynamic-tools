@@ -4,10 +4,10 @@
 
 A dynamic MCP server that automatically discovers Python files in a directory and exposes them as tools to any MCP-compatible AI client. Created through collaboration between Ben Wilson and Claude (Anthropic).
 
-## ✨ The Magic
+## How it works
 
 ```python
-# 1. Write a Python file
+# 1. Write a Python file or have the LLM write one
 def invoke(arguments):
     """Generate a secure password
     
@@ -35,7 +35,7 @@ echo "# Above code" > tools/password_generator.py
 📤 Result: "K9#mP2$vR8@nQ3!x"
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Clone and Setup
 ```bash
@@ -82,7 +82,7 @@ def invoke(arguments):
 ### 5. Restart Your MCP Client
 Your `hello` tool is now available to any AI using your MCP client!
 
-## 🛠️ How It Works
+## How It Works
 
 1. **File Discovery**: Server monitors your tools directory
 2. **Code Analysis**: Validates Python files have `invoke(arguments)` function  
@@ -90,7 +90,7 @@ Your `hello` tool is now available to any AI using your MCP client!
 4. **MCP Integration**: Exposes tools via standard MCP protocol
 5. **Error Handling**: Provides detailed feedback for debugging
 
-## 📝 Writing Tools
+## Writing Tools
 
 ### Function Signature
 Every tool must have this exact signature:
@@ -160,7 +160,7 @@ def invoke(arguments):
         return f"Error: {str(e)}"
 ```
 
-## 🔍 Robust Error Handling
+## Robust Error Handling
 
 The server provides detailed error messages to help you debug:
 
@@ -169,7 +169,7 @@ The server provides detailed error messages to help you debug:
 - **Function Signature**: Validates `invoke(arguments)` signature
 - **Runtime Errors**: Captures and reports execution problems
 
-## ⚠️ Known Limitations
+## Known Limitations
 
 ### Claude Desktop 0.9.2
 Claude Desktop currently doesn't support dynamic tool discovery ([see discussion](https://github.com/orgs/modelcontextprotocol/discussions/76)). This means:
@@ -183,7 +183,7 @@ Claude Desktop currently doesn't support dynamic tool discovery ([see discussion
 ### Tool Naming in Claude Desktop
 Tools appear with server prefix: `local__mcp-dynamic-tools__your_tool_name`
 
-## 🤝 Contributing
+## Contributing
 
 This project was created through human-AI collaboration. We welcome contributions!
 
@@ -192,16 +192,14 @@ This project was created through human-AI collaboration. We welcome contribution
 3. Add tests for new functionality  
 4. Submit a pull request
 
-## 📄 License
+## License
 
 MIT License - see LICENSE file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
-- **Ben Wilson** - Architecture and development
+- **Ben Vierck** - Architecture and development
 - **Claude (Anthropic)** - Co-development and testing
 - **MCP Community** - Protocol development and feedback
 
----
 
-**Made with ❤️ by humans and AI working together**

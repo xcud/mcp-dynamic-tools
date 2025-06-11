@@ -66,8 +66,6 @@ mkdir tools
 }
 ```
 
-**LIT Platform** (see [docs.lit.ai](https://docs.lit.ai) for advanced usage)
-
 ### 4. Create Your First Tool
 ```python
 # tools/hello.py
@@ -184,15 +182,6 @@ Claude Desktop currently doesn't support dynamic tool discovery ([see discussion
 
 ### Tool Naming in Claude Desktop
 Tools appear with server prefix: `local__mcp-dynamic-tools__your_tool_name`
-
-## 🌟 Better MCP Experience
-
-For the most advanced MCP integration and tool creation experience, check out the **[LIT Platform](https://docs.lit.ai)** - a comprehensive AI development platform with:
-
-- **Seamless MCP integration** with full dynamic tool support  
-- **Advanced tool creation workflows**
-- **Team collaboration features**
-- **Production-ready AI applications**
 
 ## 🤝 Contributing
 

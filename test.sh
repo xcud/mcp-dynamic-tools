@@ -1,0 +1,1 @@
+echo '{"jsonrpc": "2.0", "id": 1, "method": "tools/list", "params": {}}' | /home/ben/mcp-dynamic-tools/venv/bin/python /home/ben/mcp-dynamic-tools/src/mcp_dynamic_tools/server.py --tools-dir /home/ben/.config/lit-chat/mcp_tools
